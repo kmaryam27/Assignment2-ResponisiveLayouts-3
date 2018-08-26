@@ -1,0 +1,129 @@
+body{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 1fr;
+    background-color: rgb(61, 27, 27);
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header h3{
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+main{
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    grid-row: span 1;
+    grid-column: span 1;
+    margin: 30px;
+}
+
+h1{
+    grid-row: span 2;
+    background-color: red;
+    padding: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 80px;
+    justify-content: center;
+    line-height: 1.6;
+}
+
+p{
+    grid-row: span 2;
+    background-color: rgb(3, 196, 154);
+    padding: 10px;
+    font-size: 20px;
+    line-height: normal;
+}
+
+#imgdiv{
+    background-image: url("images/tie.png");
+    background-repeat:no-repeat;
+    background-position:10% 0%;
+    height: 165px;
+    grid-column: span 2;
+}
+
+#song{
+    grid-row: span 2;
+    width: 100%;
+    height: 100%;   
+    justify-content: center;
+    text-align: center;
+    object-fit: cover;
+}
+
+.pic{
+    width: 100%;
+    height: 200px;   
+    justify-content: center;
+    text-align: center;
+    object-fit: cover;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.light{
+    grid-row: span 2;
+    grid-column: span 1;
+    width: 100%;
+    height: 200px;   
+    justify-content: center;
+    text-align: center;
+    object-fit: cover;
+}
+
+@media only screen and (min-width: 600px) {
+
+    header h3{
+        margin-left: 15px;
+    }
+
+    main{
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    h1{
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+
+    #song{
+        grid-row: span 2;
+        grid-column: span 1;
+    }
+
+    #imgdiv{
+        grid-row: span 2;
+        grid-column: span 2;
+        background-position: 50% 0%;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .pic{
+        height: 100%;
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+
+    .motor{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+}
